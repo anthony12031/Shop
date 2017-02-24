@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin-app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>admin</title>
+    <script src="../../jquery/dist/jquery.js" ></script>
+    <script src="../../bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.css">
+    <script src="../../angular/angular.js"></script>
+    <link rel="stylesheet" href="./home.css">
+    <script src="./admin-app.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default custom-nav ">
+    <div class="container-fluid">
+      <h4 class="color-white font-120"><strong>Admin Dashboard</strong></h4>
+    </div>
+  <!--  <h4 class="navbar-text"></h4> -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+        <button type="button" class="btn btn-primary col-md-offset-1">Listar productos</button>
+    </div>
+    <!-- contenedor de productos -->
+      <div ng-controller="productoCtrl" >
+        <div class="col-md-offset-2">
+          <div class="col-md-2" ng-repeat="producto in productos" ng-mouseover="showBtn=true" ng-mouseleave = "showBtn=false" ng-cloak>
+           <producto-descripcion></producto-descripcion>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
